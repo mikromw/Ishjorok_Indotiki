@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutEventNewList"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include layout="@layout/view_loading_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/tiny_padding_margin"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:id="@+id/layoutNoData"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvNoData"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/sorry_there_is_no_new"
+                android:textSize="@dimen/text_mediocre"/>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/listEventNew"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="@dimen/common_padding_margin"
+            android:divider="@android:color/transparent"
+            android:smoothScrollbar="true"
+            android:scrollingCache="false"
+            android:animationCache="false" />
+    </LinearLayout>
+</LinearLayout>

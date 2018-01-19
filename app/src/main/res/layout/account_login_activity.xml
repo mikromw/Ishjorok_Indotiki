@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:src="@color/black" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layoutIndotikiLogoAnimation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_mini2_size"
+            android:visibility="visible"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/img_indotiki_logo2" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutIndotikiLogo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_mini2_size"
+            android:visibility="invisible"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/img_indotiki_logo2" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutLoginVia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layoutIndotikiLogo"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/large_padding_margin"
+            android:layout_marginLeft="@dimen/large_padding_margin"
+            android:layout_marginRight="@dimen/large_padding_margin"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/login_with"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_padding_margin"/>
+            <RadioGroup
+                android:id="@+id/rgLoginVia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_padding_margin"
+                android:checkedButton="@+id/fab_login_phone" >
+                <RadioButton
+                    android:id="@+id/fabLoginViaPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/xml_tab_login_no_right_corner"
+                    android:button="@android:color/transparent"
+                    android:padding="@dimen/common_padding_margin"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:checked="true"
+                    android:text="@string/phone"/>
+                <RadioButton
+                    android:id="@+id/fabLoginViaEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/xml_tab_login_no_left_corner"
+                    android:button="@android:color/transparent"
+                    android:padding="@dimen/common_padding_margin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:text="@string/email"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_below="@id/layoutLoginVia"
+            android:orientation="vertical">
+            <include layout="@layout/account_login_email"/>
+            <include layout="@layout/account_login_phone"/>
+        </LinearLayout>
+    </RelativeLayout >
+</RelativeLayout>
+

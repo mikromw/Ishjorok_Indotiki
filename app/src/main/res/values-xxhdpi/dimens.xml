@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="normal_line_size">2dp</dimen>
+    <dimen name="mediocre_line_size">3dp</dimen>
+
+    <dimen name="micro_padding_margin">3dp</dimen>
+    <dimen name="mini_padding_margin">4dp</dimen>
+    <dimen name="tiny_padding_margin">5dp</dimen>
+    <dimen name="small_padding_margin">7dp</dimen>
+    <dimen name="common_padding_margin">10dp</dimen>
+    <dimen name="common_padding_margin_half">-5dp</dimen>
+    <dimen name="mediocre_padding_margin">12dp</dimen>
+    <dimen name="bigger_padding_margin">15dp</dimen>
+    <dimen name="large_padding_margin">18dp</dimen>
+    <dimen name="huge_padding_margin">26dp</dimen>
+    <dimen name="giant_padding_margin">34dp</dimen>
+
+    <dimen name="common_layout_width_height">42dp</dimen>
+    <dimen name="mediocre_layout_width_height">50dp</dimen>
+
+    <dimen name="text_mini">10sp</dimen>
+    <dimen name="text_tiny">12sp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_mediocre">18sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_huge">22sp</dimen>
+    <dimen name="text_giant">25sp</dimen>
+
+    <dimen name="tiny_progress_bar">20dp</dimen>
+    <dimen name="small_progress_bar">40dp</dimen>
+    <dimen name="huge_progress_bar">65dp</dimen>
+
+    <dimen name="icon_mini_size">20dp</dimen>
+    <dimen name="icon_tiny_size">25dp</dimen>
+    <dimen name="icon_little_size">30dp</dimen>
+    <dimen name="icon_small_size">35dp</dimen>
+    <dimen name="icon_medium_size">40dp</dimen>
+    <dimen name="icon_large_size">45dp</dimen>
+    <dimen name="icon_huge_size">50dp</dimen>
+
+    <dimen name="img_mini_size">60dp</dimen>
+    <dimen name="img_mini2_size">70dp</dimen>
+    <dimen name="img_tiny_size">90dp</dimen>
+    <dimen name="img_tiny2_size">100dp</dimen>
+    <dimen name="img_tiny2_size_half">-50dp</dimen>
+    <dimen name="img_little_size">115dp</dimen>
+    <dimen name="img_little2_size">130dp</dimen>
+    <dimen name="img_small_size">145dp</dimen>
+    <dimen name="img_small2_size">160dp</dimen>
+    <dimen name="img_small3_size">170dp</dimen>
+    <dimen name="img_normal_size">180dp</dimen>
+    <dimen name="img_normal2_size">190dp</dimen>
+    <dimen name="img_normal3_size">200dp</dimen>
+    <dimen name="img_normal4_size">210dp</dimen>
+    <dimen name="img_mediocre_size">220dp</dimen>
+    <dimen name="img_mediocre2_size">230dp</dimen>
+    <dimen name="img_mediocre3_size">240dp</dimen>
+    <dimen name="img_big_size">250dp</dimen>
+    <dimen name="img_big2_size">260dp</dimen>
+    <dimen name="img_large_size">270dp</dimen>
+    <dimen name="img_large2_size">280dp</dimen>
+    <dimen name="img_huge_size">290dp</dimen>
+    <dimen name="img_huge2_size">300dp</dimen>
+    <dimen name="img_giant_size">310dp</dimen>
+    <dimen name="img_giant2_size">330dp</dimen>
+
+    <dimen name="main_menu_toolbar_height">55dp</dimen>
+    <dimen name="collapsing_toolbar">210dp</dimen>
+    <dimen name="map_size">210dp</dimen>
+
+    <dimen name="banner_height">80dp</dimen>
+
+</resources>

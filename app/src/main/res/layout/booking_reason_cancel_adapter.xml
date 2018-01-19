@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/reason_cancel_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:selectableItemBackground"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_reason"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Nasi Goreng"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/black"
+            android:paddingTop="@dimen/common_padding_margin"
+            android:paddingLeft="@dimen/common_padding_margin"
+            android:paddingBottom="@dimen/common_padding_margin"
+            />
+    </LinearLayout>
+</LinearLayout>

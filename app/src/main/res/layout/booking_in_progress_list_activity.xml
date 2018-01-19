@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layoutBookingProgress"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+  <LinearLayout
+		android:id="@+id/nobookinglayout"
+		android:gravity="center"
+		android:visibility="gone"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
+		<TextView
+			android:gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent" 
+			android:text="@string/no_booking_progress"
+			android:textSize="@dimen/text_mediocre"/>
+	</LinearLayout>
+	<include layout="@layout/view_loading_layout"/>
+	<android.support.v4.widget.SwipeRefreshLayout
+		android:id="@+id/swiperefresh"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<ListView
+			android:id="@+id/booking_transport_list_list"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:visibility="gone"
+			android:divider="#f5f2f2"
+			android:smoothScrollbar="true"
+			android:scrollingCache="false"
+			android:animationCache="false"
+			android:dividerHeight="1dp" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+   
+ 	
+ </LinearLayout>

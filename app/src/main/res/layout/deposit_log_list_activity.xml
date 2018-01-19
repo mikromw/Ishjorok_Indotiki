@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:gravity="center_vertical|center_horizontal">
+	<include layout="@layout/view_loading_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/appbar"/>
+	<include layout="@layout/view_error_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/appbar"/>
+	<LinearLayout
+		android:id="@+id/deposit_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:visibility="visible"
+		android:gravity="center"
+		android:background="@color/white"
+		android:padding="@dimen/common_padding_margin">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:gravity="center">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal"
+				android:gravity="center">
+				<LinearLayout
+					android:id="@+id/date_start_button"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:paddingLeft="@dimen/small_padding_margin"
+					android:paddingRight="@dimen/small_padding_margin"
+					android:background="@drawable/xml_bg_rounded_border_orange_6dp"
+					android:gravity="center">
+
+					<TextView
+						android:id="@+id/date_textview"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:text="@string/start_date"
+						android:textColor="@color/black"
+						android:textSize="@dimen/text_small" />
+				</LinearLayout>
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:text="-"
+					android:layout_marginRight="@dimen/small_padding_margin"
+					android:layout_marginLeft="@dimen/small_padding_margin"
+					android:textColor="@color/black"
+					android:textStyle="bold"
+					android:textSize="@dimen/text_huge"
+					android:gravity="center" />
+
+				<LinearLayout
+					android:id="@+id/date_end_button"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:orientation="horizontal"
+					android:paddingLeft="@dimen/small_padding_margin"
+					android:paddingRight="@dimen/small_padding_margin"
+					android:background="@drawable/xml_bg_rounded_border_orange_6dp"
+					android:gravity="center">
+					<TextView
+						android:id="@+id/date_end_textview"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:gravity="center"
+						android:textSize="@dimen/text_small"
+						android:textColor="@color/black"
+						android:text="@string/end_date"/>
+				</LinearLayout>
+				<LinearLayout
+					android:id="@+id/date_calculate_button"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal"
+					android:layout_marginLeft="10dp"
+					android:padding="@dimen/tiny_padding_margin"
+					android:background="@drawable/xml_bg_rounded_border_orange_6dp"
+					android:gravity="center">
+					<ImageView
+						android:layout_width="@dimen/icon_small_size"
+						android:layout_height="@dimen/icon_small_size"
+						android:src="@drawable/xml_ic_checked"
+						android:padding="@dimen/tiny_padding_margin"
+						android:visibility="visible"
+						android:text="@string/date" />
+				</LinearLayout>
+			</LinearLayout>
+
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/nobookinglayout"
+		android:gravity="center"
+		android:visibility="gone"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:background="@color/grey_50"
+		android:orientation="vertical">
+		<TextView
+			android:gravity="center"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/no_deposit_log"
+			android:textSize="20dp"/>
+	</LinearLayout>
+	<LinearLayout
+		android:id="@+id/deposit_list_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		android:background="@color/grey_50"
+		android:gravity="center">
+		<android.support.v4.widget.SwipeRefreshLayout
+			android:id="@+id/swiperefresh"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<com.pmberjaya.indotiki.views.EndlessListView
+				android:id="@+id/deposit_list"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:dividerHeight="0dp"
+
+				android:smoothScrollbar="true"
+				android:scrollingCache="false"
+				android:animationCache="false" />
+		</android.support.v4.widget.SwipeRefreshLayout>
+	</LinearLayout>
+</LinearLayout>
+  	
+
+

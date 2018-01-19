@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <include layout="@layout/toolbar"/>
+    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/view_loading_layout"/>
+    <include layout="@layout/view_error_layout"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/large_padding_margin"
+        android:gravity="center"
+        android:id="@+id/invite_friends_layout"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_normal4_size"
+            android:src="@mipmap/img_undang_teman"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Undang teman Anda sebanyak mungkin untuk mendapatkan Reward dari Indotiki"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/common_padding_margin"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_padding_margin"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/share"
+                android:padding="@dimen/common_padding_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/xml_btn_primary">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Invite friends"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium"/>
+            </LinearLayout>
+
+            <TableRow
+                android:id="@+id/facebook_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_padding_margin"
+                android:gravity="center">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                    <com.facebook.share.widget.ShareButton
+                        android:id="@+id/fb_share_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+                    <LinearLayout
+                        android:id="@+id/fb_share"
+                        android:padding="@dimen/common_padding_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/xml_btn_facebook_share">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Invite by Facebook"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_medium"/>
+                        </LinearLayout>
+                </FrameLayout>
+            </TableRow>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

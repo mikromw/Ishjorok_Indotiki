@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <include layout="@layout/toolbar" />
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/btnSubmit"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/common_padding_margin">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:id="@+id/layoutProfilePhoto"
+                        android:layout_width="@dimen/img_small_size"
+                        android:layout_height="@dimen/img_small_size"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/ivProfilePhoto"
+                            android:layout_width="@dimen/img_small_size"
+                            android:layout_height="@dimen/img_small_size"
+                            android:adjustViewBounds="true"
+                            android:src="@mipmap/img_no_avatar" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/xml_bg_rounded_solid_black_6dp"
+                            android:padding="@dimen/micro_padding_margin"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="Edit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_mini"
+                                android:textStyle="bold" />
+                            <ImageView
+                                android:layout_width="@dimen/icon_mini_size"
+                                android:layout_height="@dimen/icon_mini_size"
+                                android:layout_marginLeft="@dimen/micro_padding_margin"
+                                android:src="@mipmap/ic_base_insert_photo_white" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="@dimen/common_padding_margin"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="@dimen/icon_small_size"
+                            android:layout_height="@dimen/icon_small_size"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/ic_base_user_red" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common_padding_margin"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_margin">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/fullname"
+                                android:textColor="#070707"
+                                android:textSize="@dimen/text_medium"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/text_medium"
+                            android:visibility="gone" />
+                        <EditText
+                            android:id="@+id/etFullname"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/fullname"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:id="@+id/tvFullnameValid"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="halooooooo"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/red_600"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/common_padding_margin"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_small_size"
+                        android:layout_height="@dimen/icon_small_size"
+                        android:layout_gravity="center"
+                        android:background="@mipmap/ic_base_mail_red" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_padding_margin"
+                        android:orientation="vertical"
+                        android:padding="@dimen/common_padding_margin">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:text="Email"
+                            android:textColor="#070707"
+                            android:textSize="@dimen/text_medium"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/email"
+                            android:clickable="true"
+                            android:inputType="textWebEmailAddress"
+                            android:textSize="@dimen/text_medium"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvEmailValid"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="halooooooo"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/red_600"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/common_padding_margin"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_small_size"
+                            android:layout_height="@dimen/icon_small_size"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/ic_base_phone_red" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/common_padding_margin"
+                            android:orientation="vertical"
+                            android:padding="@dimen/common_padding_margin">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:text="@string/phone"
+                                android:textColor="#070707"
+                                android:textSize="@dimen/text_medium"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/phone2"
+                            android:inputType="phone"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:id="@+id/tvPhoneValid"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="halooooooo"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/red_600"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_padding_margin"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/cbTerms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_medium"
+                        android:text="@string/agree_inki_terms"/>
+                    <TextView
+                        android:id="@+id/tvTermsValid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="halooooooo"
+                        android:textSize="@dimen/text_small"
+                        android:textColor="@color/red_600"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/btnSubmit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/small_padding_margin"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

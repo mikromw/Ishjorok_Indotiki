@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_margin"
+        android:orientation="vertical"
+        android:padding="@dimen/common_padding_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_email"
+            android:textColor="#070707"
+            android:textSize="@dimen/text_medium"/>
+    </LinearLayout>
+    <ScrollView
+        android:orientation="vertical"
+        android:id="@+id/login_manual_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/none_of_above_layout"
+        android:visibility="visible"
+        android:gravity="center">
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/none_of_above_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_padding_margin"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/common_padding_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/none_of_the_above"
+            android:textColor="@color/blue_600"
+            android:textSize="@dimen/text_medium"
+            android:textAllCaps="true"
+            android:textStyle="bold" />
+    </LinearLayout>
+</RelativeLayout>

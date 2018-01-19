@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <fragment
+        android:id="@+id/map"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true" />
+	<ImageView
+		android:id="@+id/transparent_image"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@android:color/transparent" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/buttonLocation">
+		<ImageView
+			android:id="@+id/marker"
+			android:layout_width="@dimen/icon_small_size"
+			android:layout_height="@dimen/icon_small_size"
+			android:src="@mipmap/ic_from_place"
+			android:layout_above="@+id/center"
+			android:layout_centerHorizontal="true" />
+		<TextView
+			android:id="@+id/center"
+			android:layout_width="1dp"
+			android:layout_height="1dp"
+			android:layout_centerHorizontal="true"
+			android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<Button
+		android:id="@+id/buttonLocation"
+		android:layout_width="match_parent"
+		android:textSize="@dimen/text_medium"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/common_padding_margin"
+		android:layout_margin="@dimen/common_padding_margin"
+		android:background="@drawable/xml_btn_primary"
+		android:layout_alignParentBottom="true"
+		android:text="@string/use_this_location"
+		android:textColor="@color/white"/>
+</RelativeLayout>

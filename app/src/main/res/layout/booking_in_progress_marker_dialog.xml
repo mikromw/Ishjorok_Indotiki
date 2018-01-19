@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+    	   <LinearLayout 
+	       	android:id="@+id/buttonLocation"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		     android:paddingTop="@dimen/common_padding_margin"
+		      android:paddingLeft="@dimen/common_padding_margin"
+		       android:paddingRight="@dimen/common_padding_margin"
+		     android:paddingBottom="@dimen/common_padding_margin"
+			   android:background="@drawable/dialog_info_bubble">
+		     <LinearLayout
+		        android:id="@+id/platNumberLayout"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:padding="@dimen/small_padding_margin">
+			    <TextView
+						android:id="@+id/platNumber" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:text="Nomor plat kendaraan"
+						android:textStyle="bold"
+						android:textColor="#000000"
+						android:textSize="@dimen/text_medium"/>
+					    </LinearLayout>
+					    <ImageView
+					     android:id="@+id/garis"
+						android:layout_gravity="center"
+						android:layout_width="fill_parent" 
+						android:layout_height="2dip" 
+						android:background="#8BC34A"/>
+			    <LinearLayout
+							    android:layout_width="fill_parent"
+							    android:layout_height="wrap_content"
+							     android:gravity="center"
+							      android:orientation="vertical"
+							      android:padding="10dp">
+							      <LinearLayout
+							            android:layout_width="wrap_content"
+							        	android:layout_height="wrap_content"
+							        	android:orientation="vertical">
+									   <com.pmberjaya.indotiki.views.ImageViewRounded
+								        android:id="@+id/fotoprofil"
+										android:layout_width="@dimen/img_mini2_size"
+										android:layout_height="@dimen/img_mini2_size"
+										android:src="@mipmap/img_no_image"
+										android:adjustViewBounds="true"
+										android:gravity="center" 
+										android:layout_alignParentLeft="true"/>
+									</LinearLayout>
+				     <LinearLayout
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:orientation="vertical"
+					        android:gravity="center"  >
+				       		<TextView
+						        android:id="@+id/txtNama"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_marginTop="5dp"
+						       android:textColor="#000000"
+						        android:text="NAMA"
+						        android:textSize="@dimen/text_medium" />
+				       		<TextView
+						        android:id="@+id/txtNohp"
+						        android:layout_width="wrap_content"
+						        android:layout_height="wrap_content"
+						        android:layout_marginTop="2dp"
+						        android:textColor="#000000"
+						        android:text="NO HP"
+						        android:textSize="@dimen/text_medium" />
+			    	</LinearLayout>
+			    	
+				</LinearLayout>
+		</LinearLayout>
+</RelativeLayout >

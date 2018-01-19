@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/img_rekening"
+                android:layout_width="@dimen/img_small_size"
+                android:layout_height="@dimen/img_small_size"
+                android:layout_gravity="center"
+                android:scaleType="fitStart"
+                android:src="@drawable/img_about_deposit"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cara Konfirmasi Inki-Pay"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_medium" />
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. Tekan Top-Up dimenu Inki-Pay."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2. Pilih Jumlah saldo yang diinginkan ."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3. Pilih jenis bank dan kirimkan saldo Inki-Pay anda kerekening diatas kemudian tekan tombol submit"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4. Upload bukti pembayaran kemudian Tekan tombol 'Saya sudah bayar'."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5. Admin akan mengkonfirmasi Inki-Pay Anda."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

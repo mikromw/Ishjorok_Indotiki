@@ -1,0 +1,258 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tool_bar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="@dimen/small_padding_margin"
+                android:gravity="right"
+                android:id="@+id/icon_search"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="@dimen/icon_small_size"
+                    android:layout_height="@dimen/icon_small_size"
+                    android:layout_margin="@dimen/small_padding_margin"
+                    app:srcCompat="@mipmap/ic_base_search_grey" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/search_help_hint"
+                    android:id="@+id/ed_search"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_medium"
+                    android:theme="@style/VerificationEditText"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/fragment_help_container">-->
+
+        <!--</FrameLayout>-->
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:indeterminateOnly="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewflipper">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:id="@+id/helpServiceErrorLayout"
+                        android:gravity="center">
+                        <ImageView
+                            android:layout_width="@dimen/icon_small_size"
+                            android:layout_height="@dimen/icon_small_size"
+                            android:id="@+id/bt_helpservice_tryagain"
+                            android:src="@drawable/xml_bt_refresh"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/try_again"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:id="@+id/frequentlyasked_layout"
+                        android:orientation="vertical">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/grey_200"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:text="Frequently Asked Questions"
+                                android:textSize="@dimen/text_medium"
+                                android:padding="@dimen/small_padding_margin"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="visible"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
+
+                        </RelativeLayout>
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/frequentquestions_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_200"
+                            android:smoothScrollbar="true"
+                            android:scrollingCache="false"
+                            android:animationCache="false"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/servicecategoryhelp_layout"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/grey_200"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:text="Explore Categories"
+                                    android:textSize="@dimen/text_medium"
+                                    android:padding="@dimen/small_padding_margin"
+                                    android:background="@color/grey_200"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="visible"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/black"/>
+                            </RelativeLayout>
+
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/categories_help_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:divider="#f5f2f2"
+                                android:background="@color/grey_200"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:smoothScrollbar="true"
+                                android:scrollingCache="false"
+                                android:animationCache="false"
+                                android:dividerHeight="1dp" />
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+            <!--==================================================-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="dfsdfdsff"/>-->
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/submenuhelp_list">
+
+                </ListView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/question_layout"
+                    android:padding="@dimen/mediocre_padding_margin"
+                    android:gravity="center"
+                    android:background="@color/grey_200">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/text_medium"
+                        android:id="@+id/tv_question"/>
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_below="@id/question_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"></WebView>
+
+
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/no_result"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:id="@+id/tv_search_noresult"
+                    android:visibility="gone"
+                    android:textSize="@dimen/text_large"/>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/searched_help_list"/>
+
+            </LinearLayout>
+
+
+        </ViewFlipper>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

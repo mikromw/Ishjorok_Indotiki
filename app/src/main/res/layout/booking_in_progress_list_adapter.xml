@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardUseCompatPadding="true"
+    app:paddingEnd="0dp"
+    android:elevation="@dimen/tiny_padding_margin">
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:padding="@dimen/common_padding_margin"
+	    android:background = "#fffefe">
+		<LinearLayout
+		    android:id="@+id/transport_picture_layout"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_alignParentRight="true"
+		    android:gravity="center">
+			<ImageView
+				android:id="@+id/transport_picture"
+			    android:layout_width="@dimen/img_mini_size"
+			    android:layout_height="@dimen/img_mini_size"
+			    android:src="@mipmap/ic_logo_motorcycle_grey"
+			    android:layout_weight="1"/>
+			<LinearLayout
+			    android:layout_marginTop="@dimen/common_padding_margin"
+			    android:id="@+id/status"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:layout_alignParentRight="true"
+			    android:padding="@dimen/small_padding_margin"
+			    android:background="@drawable/xml_bg_rounded_solid_red_6dp"
+			    android:gravity="center">
+				<TextView
+					android:id="@+id/tv_status"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:text="@string/searching"
+				    android:textColor="#FFFFFF"
+				    android:textSize="@dimen/text_small"
+				    android:textStyle="bold"
+				    android:layout_weight="1"/>
+			</LinearLayout>
+		</LinearLayout>
+
+		<LinearLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignTop="@+id/transport_picture_layout"
+		    android:layout_toLeftOf="@+id/transport_picture_layout"
+		    android:orientation="vertical" >
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		            android:layout_width="@dimen/icon_tiny_size"
+		            android:layout_height="@dimen/icon_tiny_size"
+		            android:src="@mipmap/ic_from_place" />
+
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical" >
+
+		            <TextView
+		                android:id="@+id/lokasi_awal"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="@dimen/common_padding_margin"
+		                android:layout_marginRight="@dimen/common_padding_margin"
+		                android:ellipsize="end"
+		                android:gravity="center_vertical"
+		                android:text="Gang Buntu"
+		                android:textSize="@dimen/text_small"
+		                android:textStyle="bold" />
+
+		            <TextView
+		                android:id="@+id/jalan_awal"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="@dimen/common_padding_margin"
+		                android:layout_marginRight="@dimen/common_padding_margin"
+		                android:ellipsize="end"
+						android:maxLines="1"
+		                android:gravity="center_vertical"
+		                android:text="Gang Buntu"
+		                android:textSize="@dimen/text_small" />
+		        </LinearLayout>
+		    </LinearLayout>
+
+		    <LinearLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/common_padding_margin"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		            android:layout_width="@dimen/icon_tiny_size"
+		            android:layout_height="@dimen/icon_tiny_size"
+		            android:src="@mipmap/ic_to_place" />
+
+		        <LinearLayout
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:orientation="vertical" >
+
+		            <TextView
+		                android:id="@+id/lokasi_akhir"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="@dimen/common_padding_margin"
+		                android:layout_marginRight="@dimen/common_padding_margin"
+		                android:ellipsize="end"
+		                android:gravity="center_vertical"
+		                android:text="Gang tak Berujung"
+		                android:textSize="@dimen/text_small"
+		                android:textStyle="bold" />
+
+		            <TextView
+		                android:id="@+id/jalan_akhir"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_marginLeft="@dimen/common_padding_margin"
+		                android:layout_marginRight="@dimen/common_padding_margin"
+		                android:ellipsize="end"
+						android:maxLines="1"
+		                android:gravity="center_vertical"
+		                android:text="Gang tak Berujung"
+		                android:textSize="@dimen/text_small" />
+		        </LinearLayout>
+		    </LinearLayout>
+
+		    <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="@dimen/common_padding_margin"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		            android:layout_width="@dimen/icon_tiny_size"
+		            android:layout_height="@dimen/icon_tiny_size"
+		            android:src="@mipmap/ic_base_time_red"/>
+
+		        <TextView
+		            android:id="@+id/tanggal"
+		            android:layout_width="match_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="@dimen/common_padding_margin"
+		            android:layout_marginRight="@dimen/common_padding_margin"
+		            android:layout_gravity="center_vertical"
+		            android:text="19 Agustus 2015, 10:44"
+		            android:textSize="@dimen/text_small" />
+		    </LinearLayout>
+		</LinearLayout>
+
+	</RelativeLayout>
+</android.support.v7.widget.CardView>

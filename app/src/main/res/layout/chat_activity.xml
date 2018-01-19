@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown_50"
+    android:windowSoftInputMode="adjustPan">
+    <LinearLayout
+        android:id="@+id/nobookinglayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/booking_has_been_completed"
+            android:textSize="@dimen/text_large" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/bookinglayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include android:id="@+id/tool_bar"
+            layout="@layout/toolbar_chat" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/msg_box"
+            android:layout_below="@+id/tool_bar"
+            android:transcriptMode="normal"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/msg_box"
+            style="@style/AppTheme.MessageBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/bt_send_location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/common_padding_margin">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_base_location_white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bt_upload_file"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/common_padding_margin">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_base_photo_white" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/message_et"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@color/white"
+                android:hint="@string/enter_message"
+                android:maxLines="5"
+                android:padding="@dimen/common_padding_margin" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="sendMessage"
+                android:text="send"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/view_error_layout" />
+    <include layout="@layout/view_loading_layout" />
+</RelativeLayout>

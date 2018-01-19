@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200">
+    <TextView
+        android:id="@+id/header_type"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:padding="@dimen/common_padding_margin"
+        android:text="MEDAN SELERA SUKA RAMAI"
+        android:textSize="@dimen/text_medium"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        />
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    app:theme="@style/AppToolbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/small_padding_margin">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/call_driver"
+            android:orientation="horizontal">
+            <com.pmberjaya.indotiki.views.ImageViewRounded
+                android:id="@+id/img_driver"
+                android:layout_width="@dimen/icon_medium_size"
+                android:layout_height="@dimen/icon_medium_size"
+                android:src="@mipmap/img_no_avatar_driver"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_padding_margin"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_nama_driver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Asakskaksdfksjfkasdlfahsfjhasfhdakfsdsadfasdfsfasfsafasfasfafasfsdafsdasdfdsaff"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:marqueeRepeatLimit ="marquee_forever"
+                    android:textSize="@dimen/text_small"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/tv_nohp"
+                    android:textSize="@dimen/text_medium"/>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/call_driver"
+            android:layout_width="@dimen/icon_medium_size"
+            android:layout_height="@dimen/icon_medium_size"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/icon_tiny_size"
+                android:layout_height="@dimen/icon_tiny_size"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/ic_base_phone_white"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
+

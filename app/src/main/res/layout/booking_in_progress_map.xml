@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/appbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+		<include layout="@layout/toolbar"/>
+	</android.support.design.widget.AppBarLayout>
+	<RelativeLayout
+		android:id="@+id/map_layout"
+		android:layout_width="fill_parent"
+		android:layout_below="@+id/appbar"
+		android:layout_height="fill_parent">
+		<fragment 
+			android:id="@+id/map"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			class="com.google.android.gms.maps.MapFragment"/>
+		<ImageView
+			android:id="@+id/transparent_image"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:background="@android:color/transparent" />
+	</RelativeLayout>
+	<RelativeLayout
+		android:layout_width="@dimen/icon_large_size"
+		android:layout_height="@dimen/icon_large_size"
+		android:layout_alignParentBottom="true"
+		android:layout_marginBottom="@dimen/huge_padding_margin"
+		android:layout_marginLeft="@dimen/common_padding_margin"
+		android:layout_alignParentLeft="true"
+		android:layout_gravity="center">
+		<ImageButton
+			android:id="@+id/bt_traffic"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@drawable/xml_btn_circle_orange"/>
+		<ImageView
+			android:layout_width="@dimen/icon_tiny_size"
+			android:layout_height="@dimen/icon_tiny_size"
+			android:layout_centerInParent="true"
+			android:src="@mipmap/ic_base_traffic_white"/>
+	</RelativeLayout>
+</RelativeLayout>

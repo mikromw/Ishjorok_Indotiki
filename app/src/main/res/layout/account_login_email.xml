@@ -1,0 +1,89 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutLoginEmail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:visibility="gone"
+    android:padding="@dimen/large_padding_margin"
+    android:stretchColumns="2">
+    <!-- Row 1 with single column -->
+    <TableRow
+        android:id="@+id/btnLoginGoogle"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center"
+        android:padding="@dimen/common_padding_margin">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="@dimen/icon_huge_size"
+                android:layout_height="@dimen/icon_huge_size"
+                android:background="@mipmap/btn_login_google_normal"
+                android:gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:text="@string/google_plus"
+            android:textSize="@dimen/text_huge"
+            android:textColor="@color/white"
+            android:layout_marginLeft="@dimen/common_padding_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </TableRow>
+    <TableRow
+        android:id="@+id/btnLoginFacebook"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:padding="@dimen/common_padding_margin"
+        android:gravity="center">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/btnLoginFacebookDev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <ImageView
+                android:layout_width="@dimen/icon_huge_size"
+                android:layout_height="@dimen/icon_huge_size"
+                android:background="@mipmap/btn_login_facebook_normal"
+                android:gravity="center"
+                android:id="@+id/imageView4" />
+        </FrameLayout>
+        <TextView
+            android:layout_marginLeft="@dimen/common_padding_margin"
+            android:text="@string/facebook"
+            android:textSize="@dimen/text_huge"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/btnLoginYahoo"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/common_padding_margin"
+        android:gravity="center">
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="@dimen/icon_huge_size"
+                android:layout_height="@dimen/icon_huge_size"
+                android:background="@mipmap/btn_login_yahoo_normal"/>
+        </FrameLayout>
+        <TextView
+            android:layout_marginLeft="@dimen/common_padding_margin"
+            android:text="Yahoo Mail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_huge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_50"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layout_content_deposit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/layout_top_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/xml_bg_rounded_border_grey_6dp"
+            android:padding="@dimen/common_padding_margin">
+
+            <ImageView
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:src="@drawable/xml_ic_top_up_deposit" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_padding_margin"
+                android:text="Top-Up"
+                android:textSize="@dimen/text_tiny" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:padding="@dimen/common_padding_margin"
+            android:background="@drawable/xml_bg_rounded_border_grey_6dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:src="@mipmap/ic_transaction_deposit" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_padding_margin"
+                android:text="@string/transaction"
+                android:textSize="@dimen/text_tiny" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            android:padding="@dimen/common_padding_margin"
+            android:background="@drawable/xml_bg_rounded_border_grey_6dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/icon_small_size"
+                android:layout_height="@dimen/icon_small_size"
+                android:src="@drawable/xml_ic_voucher_coupon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_padding_margin"
+                android:text="@string/promo_code"
+                android:textSize="@dimen/text_tiny" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

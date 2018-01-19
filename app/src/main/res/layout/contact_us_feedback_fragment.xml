@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/infokirimkanmasukam"
+                    android:textSize="@dimen/text_medium"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/fullname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/fullname"
+                        android:maxHeight="100dp"
+                        android:layout_marginTop="@dimen/small_padding_margin"
+                        android:inputType="textMultiLine"
+                        android:imeOptions="actionDone"
+                        android:textSize="@dimen/text_medium"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/fullnamevalid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff0000"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone"
+                        android:maxHeight="100dp"
+                        android:layout_marginTop="@dimen/small_padding_margin"
+                        android:inputType="phone"
+                        android:imeOptions="actionDone"
+                        android:textSize="@dimen/text_medium"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/phonevalid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff0000"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:layout_marginTop="@dimen/small_padding_margin"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/text_medium"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/emailvalid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff0000"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/subject"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/subject"
+                        android:maxHeight="100dp"
+                        android:layout_marginTop="@dimen/small_padding_margin"
+                        android:inputType="textMultiLine"
+                        android:imeOptions="actionDone"
+                        android:textSize="@dimen/text_medium"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/subjectvalid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff0000"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/description"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Deskripsi"
+                        android:maxHeight="100dp"
+                        android:layout_marginTop="@dimen/small_padding_margin"
+                        android:inputType="textMultiLine"
+                        android:imeOptions="actionDone"
+                        android:textSize="@dimen/text_medium"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </android.support.design.widget.TextInputLayout>
+                <TextView
+                    android:id="@+id/descriptionvalid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff0000"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/sendbutton"
+                android:layout_margin="@dimen/common_padding_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:background="@drawable/xml_btn_primary"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/item_layout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sdfsdfsdfsfdsdsfs"
+        android:gravity="left|center"
+        android:textSize="@dimen/text_small"
+        android:singleLine="true"
+        android:layout_marginLeft="@dimen/small_padding_margin"
+        android:textColor="@color/black"
+        android:padding="@dimen/small_padding_margin"
+        android:id="@+id/tv_question"/>
+
+</LinearLayout>

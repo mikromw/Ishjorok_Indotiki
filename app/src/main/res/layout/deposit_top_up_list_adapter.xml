@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            app:layout_aspectRatio="150%"
+            app:layout_widthPercent="100%"
+            android:layout_margin="@dimen/tiny_padding_margin"
+            android:background="@drawable/xml_bg_border_grey_2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_nominal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/bigger_padding_margin"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tv_rp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Rp."
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_tiny" />
+
+                    <TextView
+                        android:id="@+id/tv_nominal_deposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="500"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_giant"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_cashback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/iv_cashback"
+                            android:layout_width="@dimen/icon_tiny_size"
+                            android:layout_height="@dimen/icon_tiny_size"
+                            android:padding="@dimen/tiny_padding_margin"
+                            android:src="@drawable/xml_ic_checked" />
+
+                        <TextView
+                            android:id="@+id/tv_cashback_deposit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/garis"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_tiny" />
+
+                        <TextView
+                            android:id="@+id/tv_cashback_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/micro_padding_margin"
+                            android:layout_marginStart="@dimen/micro_padding_margin"
+                            android:text="Cashback"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_tiny" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

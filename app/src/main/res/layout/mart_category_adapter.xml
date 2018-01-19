@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMartCategory"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:gravity="center"
+    android:background="@color/grey_200"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginLeft="@dimen/small_padding_margin"
+        android:layout_marginRight="@dimen/small_padding_margin"
+        android:layout_marginTop="@dimen/small_padding_margin"
+        android:layout_marginBottom="@dimen/small_padding_margin"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/ivMartLogo"
+            android:layout_width="@dimen/img_mediocre3_size"
+            android:layout_height="@dimen/img_little2_size"
+            android:src="@mipmap/ic_logo_mart_grey"
+            android:layout_centerInParent="true" />
+
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_medium"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

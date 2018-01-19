@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+
+.idea/
+app/app-member-alpha.apk
+app/app-release.apk
+app/build/
+app/src/main/res/drawable-ldpi/
+app/src/debug/

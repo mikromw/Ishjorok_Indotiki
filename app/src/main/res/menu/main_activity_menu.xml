@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainmenu_nav"
+        android:icon="@drawable/xml_ic_home_black"
+        android:title="@string/title_home" />
+
+    <item
+        android:id="@+id/bookingdata_nav"
+        android:icon="@mipmap/ic_clock_circular"
+        android:title="@string/booking" />
+
+    <item
+        android:id="@+id/event_nav"
+        android:icon="@mipmap/ic_event"
+        android:title="@string/news" />
+
+    <item
+        android:id="@+id/other_nav"
+        android:icon="@mipmap/ic_other_setting"
+        android:title="@string/other" />
+
+</menu>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/loadinglayout"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <ProgressBar
+            android:layout_width="@dimen/huge_progress_bar"
+            android:layout_height="@dimen/huge_progress_bar" />
+        <TextView
+            android:gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_place_data"
+            android:textSize="@dimen/text_large"/>
+    </LinearLayout>
+    <include layout="@layout/view_error_layout"/>
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/layoutMartCategory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/layoutSearchStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/small_padding_margin">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/place_market_empty"
+                        android:id="@+id/tv_search_store"
+                        android:padding="@dimen/small_padding_margin"
+                        android:background="@drawable/xml_bg_rounded_solid_white_5dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/layoutInkiMart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+
+                    <LinearLayout
+                        android:id="@+id/layoutBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/layoutLoadingBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/img_normal4_size"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ProgressBar
+                                android:layout_width="@dimen/small_progress_bar"
+                                android:layout_height="@dimen/small_progress_bar" />
+                        </LinearLayout>
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/viewPagerBanner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/img_normal4_size"
+                            android:layout_below="@+id/appbar"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:id="@+id/layoutErrorBanner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvErrorTimeOut"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/error_timeout"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:id="@+id/btnTryAgainBanner"
+                                android:layout_width="@dimen/small_progress_bar"
+                                android:layout_height="@dimen/small_progress_bar"
+                                android:layout_marginTop="@dimen/small_padding_margin"
+                                android:src="@mipmap/ic_refresh_button_normal" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutLoadingCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ProgressBar
+                                android:layout_width="@dimen/small_progress_bar"
+                                android:layout_height="@dimen/small_progress_bar" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutNoCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvNoCategory"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/no_menu_category"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/layoutErrorListCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/tvErrorCategory"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/error_timeout"
+                                android:textSize="14dp" />
+
+                            <ImageView
+                                android:id="@+id/ivTryAgainErrorCategory"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginTop="@dimen/small_padding_margin"
+                                android:src="@mipmap/ic_refresh_button_normal" />
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/listCategory"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone">
+                        </android.support.v7.widget.RecyclerView>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

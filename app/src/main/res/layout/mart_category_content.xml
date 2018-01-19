@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/view_error_layout"/>
+
+        <LinearLayout
+            android:id="@+id/layoutLoadingCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="@dimen/huge_progress_bar"
+                android:layout_height="@dimen/huge_progress_bar" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/get_item_category"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutMartCategory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutISignatureItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSignature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:background="@color/grey_100"
+                    android:layout_below="@+id/layoutBanner"
+                    android:textSize="@dimen/text_medium"
+                    android:padding="@dimen/small_padding_margin"
+                    android:text="Signature"
+                    android:textColor="@color/colorPrimary"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listSignatureItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mart_category_layout"
+                android:layout_marginTop="@dimen/mediocre_padding_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/banner_layout"
+                    android:layout_gravity="center"
+                    android:background="@color/grey_100"
+                    android:padding="@dimen/small_padding_margin"
+                    android:text="Category"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_medium"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tvCategory"
+                    android:orientation="vertical">
+
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/listCategoryItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible">
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
